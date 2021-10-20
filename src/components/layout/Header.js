@@ -23,7 +23,7 @@ function Header() {
 const container = {
   marginLeft: "auto",
   paddingTop: "15px",
-  paddingRight: "30px",
+  paddingRight: "20px",
   fontFamily: `'Montserrat', sans-serif`,
 };
 
