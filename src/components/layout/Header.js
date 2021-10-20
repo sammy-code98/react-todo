@@ -6,7 +6,7 @@ function Header() {
   return (
     <header style={headerStyle}>
       <h1>TodoList</h1>
-
+      <Clock />
       <div style={container}>
         <Link style={linkStyle} to="/">
           Home
@@ -16,7 +16,6 @@ function Header() {
           About
         </Link>
       </div>
-      <Clock />
     </header>
   );
 }
@@ -39,5 +38,6 @@ const headerStyle = {
 const linkStyle = {
   color: "#fff",
   textDecoration: "none",
+  cursor: "pointer",
 };
 export default Header;
