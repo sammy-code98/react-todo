@@ -67,7 +67,6 @@ class App extends Component {
 
           <Header />
           <br />
-          <br />
           {/* the exact keyword makes the route exactly the / */}
           <Route exact path="/" render={props => (
             <React.Fragment>

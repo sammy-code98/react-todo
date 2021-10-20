@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 export class AddTodo extends Component {
     state = {
         title: ''
@@ -16,14 +15,14 @@ export class AddTodo extends Component {
     }
     render() {
         return (
-            <form onSubmit={this.onSubmit} style={{ display: 'flex' }}>
+            <form onSubmit={this.onSubmit} style={{ display: 'flex', padding:'20px'  }}>
                 <input
                     type="text"
                     name="title"
                     placeholder="Add Todo"
 
                     value={this.state.title}
-                    style={{ outline: 'none', flex: '10', padding: ' 2px  7px', marginTop: '20px', borderRadius: '12px' }}
+                    style={{ outline: 'none', flex: '10', padding: '2px  7px',marginRight:'12px', marginTop: '20px', border:'1px solid  grey', borderRadius: '12px' }}
                     onChange={this.onChange}
                 />
                 {' '}
