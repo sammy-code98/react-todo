@@ -3,26 +3,13 @@ import PropTypes from 'prop-types'
 
 
 class TodoItem extends Component {
-
-    // markComplete = this.markComplete.bind(this)
-
-    // getStlye = () => {
-    //     if (this.props.todo.completed) {
-    //         return {
-    //             textDecoration: 'line-through'
-    //         }
-
-    //     } else {
-    //         return {
-    //             textDecoration: 'none'
-    //         }
-    //     }
-    // }
     getStlye = () => {
         return {
+            
             background: '#f4f4f4',
-            padding: '10px ',
-            borderBottom: '3px #ccc dotted',
+            padding: '20px',
+            margin:'20px',
+            borderRadius:'20px',
             textDecoration: this.props.todo.completed ? 'line-through' : 'none'
         }
     }

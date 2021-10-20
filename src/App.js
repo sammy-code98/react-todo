@@ -21,7 +21,7 @@ class App extends Component {
       {
         id: uuid(),
         title: 'code for 2 hours',
-        completed: true
+        completed: false
       },
       {
         id: uuid(),

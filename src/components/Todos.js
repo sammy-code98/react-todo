@@ -1,27 +1,25 @@
-import React, { Component } from 'react'
-import TodoItem from './TodoItem';
-
+import React, { Component } from "react";
+import TodoItem from "./TodoItem";
 
 // prop types
-import PropTypes from 'prop-types'
-
+import PropTypes from "prop-types";
 class Todos extends Component {
-
-
-
-    render() {
-        console.log(this.props.todos);
-        return this.props.todos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete} delTodo={this.props.delTodo} />
-
-        ))
-    }
+  render() {
+    console.log(this.props.todos);
+    return this.props.todos.map((todo) => (
+      <TodoItem
+        key={todo.id}
+        todo={todo}
+        markComplete={this.props.markComplete}
+        delTodo={this.props.delTodo}
+      />
+    ));
+  }
 }
 
 // proptype
 Todos.propTypes = {
-    todos: PropTypes.array.isRequired
-}
+  todos: PropTypes.array.isRequired,
+};
 
-
-export default Todos
+export default Todos;
