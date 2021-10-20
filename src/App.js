@@ -5,7 +5,6 @@ import './App.css'
 import Header from './components/layout/Header'
 import AddTodo from './components/AddTodo'
 import { v4 as uuid } from "uuid"
-import Clock from './components/Clock'
 import About from './components/pages/About'
 
 class App extends Component {
@@ -69,7 +68,6 @@ class App extends Component {
           <Header />
           <br />
           <br />
-          < Clock className="clock" />
           {/* the exact keyword makes the route exactly the / */}
           <Route exact path="/" render={props => (
             <React.Fragment>
