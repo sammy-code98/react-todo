@@ -5,7 +5,7 @@ import './App.css'
 import Header from './layout/Header'
 import AddTodo from './components/AddTodo'
 import { v4 as uuid } from "uuid"
-import About from './components/pages/About'
+import About from './pages/About'
 
 class App extends Component {
 
