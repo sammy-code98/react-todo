@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+
 const h1 = {
   textAlign: "center",
   fontFamily: "Montserrat",
@@ -7,6 +10,11 @@ const p = {
   textAlign: "justify",
   margin: "20px",
   padding: "12px",
+};
+const icon = {
+  display: "flex",
+  margin: "20px",
+  justifyContent: "center",
 };
 function About() {
   return (
@@ -26,6 +34,15 @@ function About() {
         become visible when keyboard users interact with the page. They are very
         easy to implement with internal page anchors and some styling
       </p>
+      <div>
+        <h3 style={h1}>Follow us on social media</h3>
+        <div style={icon}>
+          <FontAwesomeIcon icon={faCoffee} style={{ margin: "20px" }}  size="2x"/>
+          <FontAwesomeIcon icon={faCoffee} style={{ margin: "20px" }} size="2x" />
+          <FontAwesomeIcon icon={faCoffee} style={{ margin: "20px" }} size="2x"/>
+          <FontAwesomeIcon icon={faCoffee} style={{ margin: "20px" }} size="2x" />
+        </div>
+      </div>
     </React.Fragment>
   );
 }
