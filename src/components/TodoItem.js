@@ -20,16 +20,20 @@ function TodoItem(props) {
       textDecoration: props.todo.completed ? "line-through" : "none",
     };
   };
- const markComplete = (e) => {
-      console.log(props);
+
+ const markComplete =(e) => {
+      console.log(props.todo.id);
   }
-  const {title, id } = props.todo
+  const {id , title } = props.todo
+
 
   return <div style={getStlye()}>
       <p>
-      <input type="checkbox" onChange={props.markComplete.id}/>
+      {/* <input type="checkbox" onChange={props.markComplete.id}/> */}
+      <input  type="checkbox" onChange={markComplete}/>
       {' '}
       {title}
+     
       <button onClick={props.delTodo.id} style={btnStyle}>x</button>
       </p>
      
