@@ -1,45 +1,5 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
-
-class TodoItem extends Component {
-    getStlye = () => {
-        return {
-            
-            background: '#f4f4f4',
-            padding: '20px',
-            margin:'20px',
-            borderRadius:'20px',
-            textDecoration: this.props.todo.completed ? 'line-through' : 'none'
-        }
-    }
-
-    markComplete(e) {
-        console.log(this.props);
-    }
-    render() {
-        const { title, id } = this.props.todo
-        return (
-            <div style={this.getStlye()}>
-                <p>
-                    <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} />
-                    {' '}
-                    {title}
-                    {' '}
-                    <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>X</button>
-                </p>
-            </div>
-        )
-    }
-}
-
-
-// proptype
-TodoItem.propTypes = {
-    todo: PropTypes.object.isRequired
-}
-
-
+import React from "react";
+import PropTypes from "prop-types";
 const btnStyle = {
     background: '#ff0000',
     border: 'none',
@@ -50,6 +10,35 @@ const btnStyle = {
     float: 'right',
     outline: 'none'
 }
+function TodoItem(props) {
+  const getStlye = () => {
+    return {
+      background: "#f4f4f4",
+      padding: "20px",
+      margin: "20px",
+      borderRadius: "20px",
+      textDecoration: props.todo.completed ? "line-through" : "none",
+    };
+  };
+ const markComplete = (e) => {
+      console.log(props);
+  }
+  const {title, id } = props.todo
 
+  return <div style={getStlye()}>
+      <p>
+      <input type="checkbox" onChange={props.markComplete.id}/>
+      {' '}
+      {title}
+      <button onClick={props.delTodo.id} style={btnStyle}>x</button>
+      </p>
+     
+  </div>;
+}
 
-export default TodoItem
+// proptypes
+TodoItem.propTypes = {
+    todo: PropTypes.object.isRequired
+}
+
+export default TodoItem;
